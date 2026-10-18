@@ -229,8 +229,6 @@ public class VideoGenerator : MonoBehaviour
         Quaternion originalRotation = target.rotation;
         RenderTexture originalCameraTarget = captureCamera.targetTexture;
         Behaviour controller = movementControllerToDisable;
-        if (controller == null)
-            controller = target.GetComponent<FlyCamera>();
         bool controllerWasEnabled = controller != null && controller.enabled;
         if (controllerWasEnabled)
             controller.enabled = false;
